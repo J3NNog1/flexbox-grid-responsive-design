@@ -1,0 +1,99 @@
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+/* resets font size to be 62.5% of the user preference - 
+   in most browser configurations this will be 10px */
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: gray;
+/* Use a system font, if none are available use an available sans-sarif   font */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+main {
+  height: 375px;
+  width: 250px;
+  background-color: white;
+  text-align: center ;
+}
+
+#status {
+  display: flex;
+  justify-content: flex-end;
+  padding: 8px 8px 0 0;
+}
+
+img {
+  border-radius: 50%;
+  border: 3px green solid;
+
+}
+
+h1 {
+  font-size: 22px;
+} 
+
+#occupation {
+  background-color: darkgrey;
+  padding: 4px
+}
+
+#brand {
+  display: none;
+}
+
+p {
+  margin: 4px 0;
+}
+
+#offer {
+  padding: 4px 0;
+}
+
+#contact {
+  display: flex;
+
+}
+#contact > p {
+  height: 80px;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+#contact >:first-child {
+  background-color: lime;
+
+}
+#contact >:last-child {
+  background-color: green;
+}
+
+@media only screen and (min-width : 768px) {
+  main {
+    width: 400px
+    
+  }
+}
